@@ -1,0 +1,153 @@
+/*======================================
+ 基本設定
+======================================*/
+.menu2 ul, .menu2 ul li, .mobile_level1 {
+  list-style: none;
+}
+/*======================================
+ LEVEL1
+======================================*/
+.menu2 ul li { 
+  position: relative;
+}
+
+/* This hides the dropdowns */
+.menu2 li ul {
+  display: none;
+}
+/* 第一層文字 */
+.menu2 ul li a {
+  display: block;
+  /* width: 100%; */
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  position: relative!important;
+  font-size: 14px;
+}
+/* 只有第一層文字加上隱形 border */
+.menu2 > ul > li > a {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+.menu2 li:hover a {
+  background: transparent;
+  color: yellow!important;
+}
+/*======================================
+ LEVEL2
+======================================*/
+/* Display the dropdown */
+.menu2 li:hover > ul {
+  display: block;
+  position: absolute;
+  min-width: 100%;
+  box-shadow: 0px 5px 0px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding-top: 12px!important;
+}
+.menu2 li:last-child:hover > ul {
+    right: 0;
+  }
+/* 第二三層的文字 */
+.menu2 li:hover ul li a{
+  font-size: 14px;
+  color: #fff!important;
+}
+.menu2 ul li ul li{
+  display: block;
+  text-align: center;
+}
+/* 第二層級第三層的外框 */
+.menu2 li ul li {
+  position: relative;
+  border: 1px solid #306C18;
+  border-top: 0px;
+  background: rgba(62,129,28,0.9);
+  padding: 0px;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.menu2 li ul li:hover {
+  background: #275d12;
+  /* border: 1px solid red!important; */
+}
+.menu2 li ul li a {
+  color: #fff!important;
+  padding: 10px 10px;
+  text-align: center;
+  /* min-width: 260px; */
+  width: 100%;
+  display: block;
+  position: relative;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+/* 第二層hover文字顏色 */
+.menu2 li:hover li a:hover {
+  color: yellow!important;
+}
+.menu2 .main-navigation li ul li {
+  border-top: 0;
+}
+/* 第三層的位置 */
+/* Displays second level dropdowns to the right of the first level dropdown */
+.menu2 ul ul ul {
+  left: 100%;
+  top: -13px;
+  padding-left: 3px!important;
+}
+.menu2 li ul li:first-child {
+  border-radius: 3px 3px 0px 0px!important;
+}
+.menu2 li ul li:last-child {
+  border-radius: 0px 0px 3px 3px!important;
+  border-bottom: none!important;
+}
+.menu2 li:hover #level2_ul li:last-child a{
+  border-bottom: 0px solid #1f2664;
+}
+.menu_inside_icon {
+  font-size: 13px!important;
+  margin-left: 3px;
+  /* margin-top: -3px!important; */
+}
+.high_light_menu {
+    background-color: #787ECE!important;
+    border: 1px solid #7682BE!important;
+}
+.high_light_menu:hover {
+    background-color: #6B70B7!important;
+}
+.high_light_menu a {
+    color: black!important;
+}
+/* 第三層 */
+.menu2 li ul li ul , .menu2 li ul li ul li {
+  margin: 0;
+  padding: 0;
+}
+.menu2 li ul li ul li {
+  background: #2e3e92;
+}
+.menu2 li ul li ul li a {
+  color: white!important;
+}
+.menu2 li ul li ul li:hover {
+  background: #769ad0;
+}
+
+/* Simple clearfix */
+.menu2 ul:before,
+.menu2 ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.menu2 ul:after {
+  clear: both;
+}
+.current_menu a{
+    color: yellow!important;
+}
